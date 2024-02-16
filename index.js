@@ -35,25 +35,15 @@ async function searchMovieByTitle(movieTitle) {
        }     
 }
 
-// function returnMovieById(moviesBySearchArray) {
-//   const movieArray =   moviesBySearchArray.map( async movie => {
-//         const url =  `http://www.omdbapi.com/?i=${movie.imdbID}&apikey=de5594b7`
-//         const response = await fetch(url)
-//         const data = await response.json()     
-        
-//         renderMovies(data) 
-//     })
-       
-// }
 
 async function returnMovieById(moviesBySearchArray) {
-    // Clear the movieArray before populating it with new data
+
     for (const movie of moviesBySearchArray) {
-        const url = `http://www.omdbapi.com/?i=${movie.imdbID}&apikey=de5594b7`;
-        const response = await fetch(url);
-        const data = await response.json();
-        movieArray.push(data); // Push each movie object into the movieArray
-        renderMovies(data); // Render the movie details on the page
+        const url = `http://www.omdbapi.com/?i=${movie.imdbID}&apikey=de5594b7`
+        const response = await fetch(url)
+        const data = await response.json()
+        movieArray.push(data)
+        renderMovies(data)
     }
 }
 
