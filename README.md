@@ -1,5 +1,5 @@
 # Movie List
-<p>This application allows the search of favourite movies and adding them to the watch list</p>
+<p>This application allows the search of favourite movies and adding them to a watch list</p>
 <p>Built this project to utilising the <a href="https://www.omdbapi.com/">OMDb API</a>, Open Movie Database to practice the concept of Rest API</p>
 
 ## Sample image of Application
