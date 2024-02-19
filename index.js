@@ -60,7 +60,7 @@ async function handleFetch(movieTitle) {
   // clearing movie list
   movieList.innerHTML = ''
 
-  let url = `http://www.omdbapi.com/?s=${movieTitle}&apikey=de5594b7`
+  let url = `https://www.omdbapi.com/?s=${movieTitle}&apikey=de5594b7`
 
   const response = await fetch(url)
        const data = await response.json()
@@ -93,7 +93,7 @@ function renderWatchlistPage() {
          watchListPage.innerHTML = ''
  
          for ( let eachMovie of moviesAdded) {
-             fetch (`http://www.omdbapi.com/?i=${eachMovie}&apikey=de5594b7`)
+             fetch (`https://www.omdbapi.com/?i=${eachMovie}&apikey=de5594b7`)
                   .then(response => response.json())
                   .then(data => {
                      watchListPage.innerHTML +=  `
@@ -130,7 +130,7 @@ function renderWatchlistPage() {
 async function returnMovieById(moviesBySearchArray) {
 
     for (const movie of moviesBySearchArray) {
-        const url = `http://www.omdbapi.com/?i=${movie.imdbID}&apikey=de5594b7`
+        const url = `https://www.omdbapi.com/?i=${movie.imdbID}&apikey=de5594b7`
         const response = await fetch(url)
         const data = await response.json()
         movieArray.push(data)
